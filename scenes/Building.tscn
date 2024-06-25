@@ -1,0 +1,133 @@
+[gd_scene load_steps=14 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.0941176, 0.607843, 0.858824, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.705882, 0.698039, 0.698039, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.568627, 0.760784, 0.831373, 1 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 1, 0.65098, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 1, 0.65098, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 1, 0.65098, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.670588, 1, 0.592157, 1 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0.898039, 1, 0.32549, 1 )
+
+[sub_resource type="PrismMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.32549, 0.32549, 0.32549, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=4]
+data = PoolVector3Array( 0, 1, 1, 1, -1, 1, -1, -1, 1, 0, 1, -1, -1, -1, -1, 1, -1, -1, 0, 1, 1, 0, 1, -1, 1, -1, 1, 0, 1, -1, 1, -1, -1, 1, -1, 1, 0, 1, -1, 0, 1, 1, -1, -1, -1, 0, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[node name="Building" type="Spatial"]
+transform = Transform( 2.60419, 0, 0, 0, 2.60419, 0, 0, 0, 2.60419, 0, 0, 0 )
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial"]
+transform = Transform( 3, 0, 0, 0, 2, 0, 0, 0, 0.2, 0, 2, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance7" type="MeshInstance" parent="Spatial"]
+transform = Transform( 3, 0, 0, 0, -8.74228e-08, -0.2, 0, 2.18715, -9.56033e-09, 0, 3.81331, 2.01935 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance7/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance8" type="MeshInstance" parent="Spatial"]
+transform = Transform( 3, 0, 0, 0, -8.74228e-08, -0.2, 0, 2.18715, -9.56033e-09, 0, -0.183747, 2.01935 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance8/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="Spatial"]
+transform = Transform( 3, 0, 0, 0, 1.06044, 0, 0, 0, 0.2, 0, 2.94776, 3.99694 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 8 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance4/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="Spatial"]
+transform = Transform( 1.88084, 0, 0, 0, 1.06044, 0, 0, 0, 0.2, 0.861805, 1.06455, 3.99694 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 9 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance5/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="Spatial"]
+transform = Transform( 0.452582, 0, 0, 0, 1.06044, 0, 0, 0, 0.2, -2.5535, 1.06455, 3.99694 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 10 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance6/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Spatial"]
+transform = Transform( -1.31134e-07, 0, 0.2, 0, 2, 0, -2.16757, 0, -6.3165e-09, 2.81437, 2, 1.97985 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 11 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance2/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Spatial"]
+transform = Transform( -1.31134e-07, 0, 0.2, 0, 2, 0, -2.16757, 0, -6.3165e-09, -2.80769, 2, 1.97985 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 12 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance3/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance9" type="MeshInstance" parent="Spatial"]
+transform = Transform( -1.06642e-08, 0, 0.543156, 0, 0.202941, 0, -0.797905, 0, -7.76494e-08, -1.56056, -0.188752, 4.20789 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 13 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial/MeshInstance9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/MeshInstance9/StaticBody"]
+shape = SubResource( 4 )

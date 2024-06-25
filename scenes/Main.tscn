@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=2]
 [ext_resource path="res://scenes/House1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Slope.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Building.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Ladder.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.156863, 0.505882, 0.0588235, 1 )
@@ -33,3 +35,9 @@ transform = Transform( 0.239451, 0, 0, 0, 0.239451, 0, 0, 0, 0.239451, -13.6315,
 
 [node name="Slope" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.40599, 0, 4.85266 )
+
+[node name="Building" parent="." instance=ExtResource( 5 )]
+transform = Transform( 2.60419, 0, 0, 0, 2.60419, 0, 0, 0, 2.60419, 16.4813, 1.76734, -22.3259 )
+
+[node name="Ladder" parent="." instance=ExtResource( 6 )]
+transform = Transform( 2.18071, 0, 0, 0, 2.18071, 0, 0, 0, 2.18071, 18.6453, 7.80072, -7.79402 )
